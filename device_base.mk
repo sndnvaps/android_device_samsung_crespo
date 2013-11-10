@@ -76,22 +76,22 @@ PRODUCT_COPY_FILES += \
         device/samsung/crespo/samsung_mfc_fw.bin:system/vendor/firmware/samsung_mfc_fw.bin
 
 # NFC
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
 	libnfc \
 	libnfc_jni \
 	Nfc \
 	Tag
 
 # Commands to migrate prefs from com.android.nfc3 to com.android.nfc
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt
 
 # file that declares the MIFARE NFC constant
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
 # NFC EXTRAS add-on API
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
 	com.android.nfc_extras
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
@@ -119,15 +119,15 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # These are the OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
-	device/samsung/crespo/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \
 	device/samsung/crespo/media_profiles.xml:system/etc/media_profiles.xml \
 	device/samsung/crespo/media_codecs.xml:system/etc/media_codecs.xml
+#		device/samsung/crespo/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry 
 
 
 # These are the OpenMAX IL modules
 PRODUCT_PACKAGES += \
-	libSEC_OMX_Core \
-	libOMX.SEC.AVC.Decoder \
+	libSEC_OMX_Core 
+#	libOMX.SEC.AVC.Decoder \
 	libOMX.SEC.M4V.Decoder \
 	libOMX.SEC.M4V.Encoder \
 	libOMX.SEC.AVC.Encoder
@@ -172,7 +172,7 @@ PRODUCT_COPY_FILES += \
 	device/samsung/crespo/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc
 
 # Device app
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
         CrespoParts
 
 # for bugmailer
