@@ -79,9 +79,22 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/crespo/graphics.c
+#BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/crespo/graphics.c
 
 BOARD_USE_SKIA_LCDTEXT := true
+
+## MIUI RECOVERY
+#MIUI_DEVICE_CONF := ../../../device/samsung/crespo/device.conf
+#MIUI_INIT_CONF := ../../../device/samsung/crespo/init.conf
+MIUI_RECOVERY_BUILD_DEVICE := CRESPO4G
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=1
+ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
+TARGET_RECOVERY_INITRC := device/samsung/crespo/init.rc
+TW_EXCLUDE_SUPERSU := true
+TARGET_PREBUILT_KERNEL := device/samsung/crespo/kernel
+BOARD_REC_LANG_CHINESE := true
+TARGET_DEVICE_RESOLUTION := 480x800
 
 # Connectivity - Wi-Fi
 WPA_SUPPLICANT_VERSION      := VER_0_8_X

@@ -1,0 +1,12 @@
+#新弄的分区表
+#device                                          mnt_point      fstype  mount_flags   option   fs_mgr_flags  
+/dev/block/platform/s3c-sdhci.0/by-name/media     /sdcard        vfat      rw,dirsync,nosuid,nodev,noexec 0 0
+/dev/block/platform/s3c-sdhci.0/by-name/system    /system        ext4      rw           defaults  0          
+/dev/block/platform/s3c-sdhci.0/by-name/userdata  /data          ext4      rw,nosuid,nodev,noatime,barrier=1  0   0
+/dev/block/mtdblock4                              /cache         yaffs2    rw,nosuid,nodev,relatime  0 0 
+/dev/block/mtdblock6                              /efs           yaffs2     rw,nosuid,nodev,relatime  0  0
+/dev/block/mtdblock2                              /boot         mtd
+/dev/block/mtdblock3                              /recovery     mtd
+/dev/block/mtdblock0                              /bootloader   mtd
+/dev/block/mtdblock5                              /radio        mtd
+/dev/block/mtdblock1                              /misc         mtd
